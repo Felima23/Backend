@@ -1,5 +1,5 @@
 const mysql = require('mysql2');
-require('dotenv').config(); // Certifique-se de instalar o dotenv com `npm install dotenv`
+require('dotenv').config(); // Certifique-se de instalar o dotenv com `C`
 
 
 const db = mysql.createConnection({
