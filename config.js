@@ -1,10 +1,12 @@
 const mysql = require('mysql2');
+require('dotenv').config(); // Certifique-se de instalar o dotenv com `npm install dotenv`
+
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',       // Seu usuário do MySQL
-    password: '',     // Sua senha do MySQL
-    database: 'ecomaterialize'       // Nome do banco de dados que você criou
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,       // Seu usuário do MySQL
+    password: process.env.MYSQLPASSWORD,     // Sua senha do MySQL
+    database: process.env.MYSQL_DATABASE       // Nome do banco de dados que você criou
 });
 
 db.connect((err) => {
